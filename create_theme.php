@@ -1,20 +1,18 @@
 #!/usr/bin/env php
 <?php
-$name = 'kp';
-echo getcwd();
-mkdir(getcwd()."/$name/js/", 0777, true);
-mkdir(getcwd()."/$name/css/", 0777, true);
-mkdir(getcwd()."/$name/images/", 0777, true);
-mkdir(getcwd()."/$name/templates/Includes", 0777, true);
-mkdir(getcwd()."/$name/templates/Layout", 0777, true);
 
-// echo $currentFolder;
+echo "What is the name of your theme? ";
+$handle = fopen('php://stdin', 'r');
+$themeName = fgets($handle);
 
-// echo "What is the name of your theme?:";
-// $themeName = fgets(STDIN);
-// echo 'Theme Name: ' .$themeName;
+$themeName = trim($themeName);
 
-// mkdir($currentFolder.$themeName);
+mkdir(getcwd()."/$themeName/js/", 0777, true);
+mkdir(getcwd()."/$themeName/css/", 0777, true);
+mkdir(getcwd()."/$themeName/images/", 0777, true);
+mkdir(getcwd()."/$themeName/templates/Includes", 0777, true);
+mkdir(getcwd()."/$themeName/templates/Layout", 0777, true);
+
 
 
 
